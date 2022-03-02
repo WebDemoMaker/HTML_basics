@@ -1,0 +1,19 @@
+<!-- in this video we are going to see the picture tag which is used to display different images depending upon the device width -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>picture tag</title>
+</head>
+<body>
+<picture>
+	<!-- above 500px width dog image will be visible -->
+	<source srcset="https://cdn.pixabay.com/photo/2020/05/08/16/06/dog-5146351__340.jpg" media="(min-width:500px)">
+		<!-- b/w 300 and 500 cat image will be visible -->
+		<source srcset="https://cdn.pixabay.com/photo/2021/02/23/09/26/cat-6042858__340.jpg" media="(min-width:300px)">
+		<img src="https://cdn.pixabay.com/photo/2022/02/16/14/47/bird-7016926__340.jpg" alt="bird">
+</picture>
+</body>
+</html>

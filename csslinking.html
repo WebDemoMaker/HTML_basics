@@ -1,0 +1,41 @@
+<!-- in this video we are going to learn about what are the different ways to add css to HTML document
+1)inline(using style attribute) 
+2)external(using link tag)
+3)internal(using style tag)
+-->
+
+<!-- now lets check the priority of these css styles 
+
+the order of priority is:-
+
+inline > internal > external
+
+for changing the priority you can use !important in attribute property value
+-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<!-- external css -->
+	<link rel="stylesheet" type="text/css" href="./demo.css">
+	<!-- internal css -->
+	<style type="text/css">
+		h1
+		{
+			/*font-size: 100px;*/
+			background-color:green!important;
+		}
+	</style>
+</head>
+<body>
+	<!-- inline css -->
+	<h1 style="background-color:red;">Hello Inline</h1>
+
+
+
+</body>
+</html>
