@@ -1,0 +1,34 @@
+<!-- in this video we are going to learn how to fetch user's location using HTML geolocation-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>geolocation</title>
+</head>
+<body>
+<button>Fetch Location</button>
+<script type="text/javascript">
+  document.getElementsByTagName('button')[0].addEventListener("click",fetchLocation)
+
+
+  function fetchLocation(e)
+  {
+    if(navigator.geolocation)
+    {
+      navigator.geolocation.getCurrentPosition(function(position){
+        let {latitude , longitude} = position.coords
+        console.log(latitude,longitude)
+
+        // you can find out the user location simply by searching long.. and lat.. coordinates valu7e in google map or any other map service
+      })
+    }
+    else
+    {
+      console.log("geolocation api not supported")
+    }
+  }
+</script>
+</body>
+</html>
