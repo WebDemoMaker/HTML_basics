@@ -1,0 +1,100 @@
+<!-- In this video we are going to create a simple dropdown , UI design inspired by here https://uxdesign.cc/ui-cheat-sheet-dropdown-field-a30025c0f432 -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dropdown</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style type="text/css">
+  body
+  {
+    background: linear-gradient(to bottom,rgb(50, 210, 196),rgb(21, 160, 242),rgb(131, 88, 252));
+    min-height: calc(100vh - 17px);
+  }
+  fieldset
+  {
+    color: white;
+    border: 2px solid white;
+    /*font-weight: bold;*/
+    font-size: 20px;
+    /*background-color: red;*/
+
+    
+  }
+  #arrow
+  {
+    display: block;
+    width: 20px;
+    margin-left: auto;
+  }
+ 
+ p
+ {
+  display: block;
+  color: rgb(21, 160, 242);
+  background-color: white;
+  padding: 5px;
+  margin: 0px;
+  font-weight: bold;
+  border-radius: 10px;
+/*  overflow: hidden;*/
+
+
+
+ }
+ p:hover
+ {
+  background-color: lightcyan;
+ }
+ div
+ {
+  max-height: 300px;
+  background-color: yellow;
+  overflow: hidden;
+  transition: 0.6s ease-in-out;
+ }
+
+ .inactive
+ {
+  max-height: 0px;
+  overflow: hidden;
+ }
+
+</style>
+<body>
+  <fieldset>
+    <legend>Dropdowns</legend>
+    <span id="arrow"><i class="fa-solid fa-chevron-down"></i></span>
+  </fieldset>
+<div class="inactive">
+  <p>1</p>
+  <p>2</p>
+  <p>3</p>
+  <p>4</p>
+  <p>5</p>
+</div>
+<script type="text/javascript">
+  document.getElementsByTagName('span')[0].addEventListener("click",function(e){
+    let icon = document.getElementsByTagName('i')[0]
+    let div = document.getElementsByTagName("div")[0];
+    if(div.classList.contains("inactive"))
+    {
+      div.classList.remove("inactive")
+      icon.classList.remove("fa-chevron-down")
+      icon.classList.add("fa-chevron-up")
+
+    }
+    else
+    {
+      div.classList.add("inactive")
+         icon.classList.add("fa-chevron-down")
+      icon.classList.remove("fa-chevron-up")
+
+    }
+  })
+</script>
+
+</body>
+</html>
